@@ -84,6 +84,7 @@
 		28FD85861BAD093C00C33E8F /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				28FD85BD1BAD156900C33E8F /* Defines */,
 				28FD85AE1BAD0CAB00C33E8F /* Global */,
 				28FD85AF1BAD0CC200C33E8F /* Controller */,
 				28FD85B01BAD0CE000C33E8F /* Model */,
@@ -92,7 +93,6 @@
 				28FD85B31BAD0D0600C33E8F /* Utility */,
 				28FD85B41BAD0D4200C33E8F /* ThirdSDK */,
 				28FD85B61BAD0DFD00C33E8F /* Resources */,
-				28FD85B51BAD0D9B00C33E8F /* Defines.h */,
 				28FD858B1BAD093C00C33E8F /* AppDelegate.h */,
 				28FD858C1BAD093C00C33E8F /* AppDelegate.m */,
 				28FD85871BAD093C00C33E8F /* Supporting Files */,
@@ -234,6 +234,14 @@
 			children = (
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		28FD85BD1BAD156900C33E8F /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				28FD85B51BAD0D9B00C33E8F /* Defines.h */,
+			);
+			name = Defines;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +525,79 @@
 			};
 			name = Release;
 		};
+		28FD85BE1BAD180B00C33E8F /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Appstore;
+		};
+		28FD85BF1BAD180B00C33E8F /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NewsReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Appstore;
+		};
+		28FD85C01BAD180B00C33E8F /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NewsReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewsReader.app/NewsReader";
+			};
+			name = Appstore;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -524,6 +605,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28FD85A51BAD093C00C33E8F /* Debug */,
+				28FD85BE1BAD180B00C33E8F /* Appstore */,
 				28FD85A61BAD093C00C33E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -533,6 +615,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28FD85A81BAD093C00C33E8F /* Debug */,
+				28FD85BF1BAD180B00C33E8F /* Appstore */,
 				28FD85A91BAD093C00C33E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -541,6 +624,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28FD85AB1BAD093C00C33E8F /* Debug */,
+				28FD85C01BAD180B00C33E8F /* Appstore */,
 				28FD85AC1BAD093C00C33E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
