@@ -1,0 +1,15 @@
+//
+//  NewReader-Prefix.pch
+//  NewsReader
+//
+//  Created by lz on 15/9/19.
+//
+//
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+#import "Defines.h"
+
+
+#endif
