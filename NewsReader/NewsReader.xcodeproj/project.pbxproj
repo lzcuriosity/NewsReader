@@ -12,9 +12,7 @@
 		28FD85901BAD093C00C33E8F /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD858F1BAD093C00C33E8F /* HomePage.m */; };
 		28FD85951BAD093C00C33E8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28FD85941BAD093C00C33E8F /* Images.xcassets */; };
 		28FD85A41BAD093C00C33E8F /* NewsReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD85A31BAD093C00C33E8F /* NewsReaderTests.m */; };
-		28FD85C71BAD450D00C33E8F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FD85C51BAD450D00C33E8F /* LaunchScreen.xib */; };
 		28FD85C81BAD450D00C33E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FD85C61BAD450D00C33E8F /* Main.storyboard */; };
-		28FD85CB1BAD45AD00C33E8F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FD85CA1BAD45AD00C33E8F /* Default-568h@2x.png */; };
 		28FD85D11BAD492500C33E8F /* FxBasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD85D01BAD492500C33E8F /* FxBasePage.m */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +40,8 @@
 		28FD85A31BAD093C00C33E8F /* NewsReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsReaderTests.m; sourceTree = "<group>"; };
 		28FD85AD1BAD0B6500C33E8F /* Readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		28FD85B51BAD0D9B00C33E8F /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
-		28FD85C51BAD450D00C33E8F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		28FD85C61BAD450D00C33E8F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28FD85C91BAD456D00C33E8F /* NewReader-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NewReader-Prefix.pch"; sourceTree = "<group>"; };
-		28FD85CA1BAD45AD00C33E8F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		28FD85CF1BAD492500C33E8F /* FxBasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxBasePage.h; sourceTree = "<group>"; };
 		28FD85D01BAD492500C33E8F /* FxBasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxBasePage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +67,6 @@
 		28FD857B1BAD093C00C33E8F = {
 			isa = PBXGroup;
 			children = (
-				28FD85CA1BAD45AD00C33E8F /* Default-568h@2x.png */,
 				28FD85AD1BAD0B6500C33E8F /* Readme */,
 				28FD85861BAD093C00C33E8F /* NewsReader */,
 				28FD85A01BAD093C00C33E8F /* NewsReaderTests */,
@@ -221,7 +216,6 @@
 		28FD85BA1BAD0FD900C33E8F /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				28FD85C51BAD450D00C33E8F /* LaunchScreen.xib */,
 				28FD85C61BAD450D00C33E8F /* Main.storyboard */,
 			);
 			path = Xib;
@@ -297,10 +291,11 @@
 		28FD857C1BAD093C00C33E8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					28FD85831BAD093C00C33E8F = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 535B2C4Z22;
 					};
 					28FD859C1BAD093C00C33E8F = {
 						CreatedOnToolsVersion = 6.4;
@@ -333,8 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28FD85C81BAD450D00C33E8F /* Main.storyboard in Resources */,
-				28FD85CB1BAD45AD00C33E8F /* Default-568h@2x.png in Resources */,
-				28FD85C71BAD450D00C33E8F /* LaunchScreen.xib in Resources */,
 				28FD85951BAD093C00C33E8F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +393,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -465,11 +459,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "/Users/lz/Developer/NewsReader/NewsReader/NewsReader/NewReader-Prefix.pch";
 				INFOPLIST_FILE = NewsReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lzcuriosity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -477,11 +477,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "/Users/lz/Developer/NewsReader/NewsReader/NewsReader/NewReader-Prefix.pch";
 				INFOPLIST_FILE = NewsReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lzcuriosity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -499,6 +505,7 @@
 				);
 				INFOPLIST_FILE = NewsReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lzcuriosity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewsReader.app/NewsReader";
 			};
@@ -514,6 +521,7 @@
 				);
 				INFOPLIST_FILE = NewsReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lzcuriosity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewsReader.app/NewsReader";
 			};
@@ -567,11 +575,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "/Users/lz/Developer/NewsReader/NewsReader/NewsReader/NewReader-Prefix.pch";
 				INFOPLIST_FILE = NewsReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lzcuriosity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Appstore;
 		};
@@ -589,6 +603,7 @@
 				);
 				INFOPLIST_FILE = NewsReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lzcuriosity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewsReader.app/NewsReader";
 			};
@@ -615,6 +630,7 @@
 				28FD85A91BAD093C00C33E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28FD85AA1BAD093C00C33E8F /* Build configuration list for PBXNativeTarget "NewsReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +640,7 @@
 				28FD85AC1BAD093C00C33E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
